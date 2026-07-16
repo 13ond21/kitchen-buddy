@@ -1,22 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kitchen Buddy â€” calm kitchen, on your phone</title>
-  <meta name="description" content="Kitchen Buddy is a calm, privacy-first kitchen assistant. Privacy policy and terms for the Android app." />
+  <title>Kitchen Buddy — calm kitchen, on your phone</title>
+  <meta name="description" content="Kitchen Buddy is a calm, privacy-first kitchen assistant for Android. Pantry, multi-dish cook timers, shopping lists — offline-first by Lucky Tools." />
+  <meta property="og:title" content="Kitchen Buddy" />
+  <meta property="og:description" content="Calm cook timers, pantry stock and shopping lists. Offline-first kitchen helper." />
+  <meta property="og:image" content="assets/feature_graphic.png" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðŸ¥£</text></svg>" />
+  <link rel="icon" type="image/png" href="assets/icon_512.png" />
+  <link rel="apple-touch-icon" href="assets/icon_512.png" />
 </head>
 <body>
   <header class="site-header">
     <div class="inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">ðŸ¥£</span>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/icon_512.png" alt="" width="40" height="40" />
+        </span>
         Kitchen Buddy
       </a>
       <nav class="nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
+        <a href="#screens">Screens</a>
         <a href="privacy.html">Privacy</a>
         <a href="delete-data.html">Delete data</a>
         <a href="terms.html">Terms</a>
@@ -26,57 +33,138 @@
 
   <main class="wrap">
     <section class="hero">
-      <h1>Your calm kitchen buddy</h1>
-      <p class="lede">
-        Stock, scan-to-pantry, multi-dish timers, and a meal diary â€” designed for
-        low-stress cooking. Kitchen data stays on your device. Optional online
-        product lookup only when you allow it.
-      </p>
-      <div class="badge-row">
-        <span class="badge accent">Offline-first</span>
-        <span class="badge">No account required</span>
-        <span class="badge">Android</span>
-        <span class="badge">Lucky Tools</span>
+      <div>
+        <h1>Your calm kitchen buddy</h1>
+        <p class="lede">
+          Stock the pantry, scan products, run multi-dish timers, and keep a shopping
+          list — without the noise. Kitchen data stays on your phone. Optional online
+          product lookup only when you allow it.
+        </p>
+        <div class="badge-row">
+          <span class="badge accent">Offline-first</span>
+          <span class="badge">No account required</span>
+          <span class="badge">Android</span>
+          <span class="badge">Lucky Tools</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
+          <a class="btn btn-secondary" href="delete-data.html">Delete my data</a>
+          <a class="btn btn-secondary" href="terms.html">Terms</a>
+        </div>
       </div>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
-        <a class="btn btn-secondary" href="terms.html">Terms of use</a>
+      <div class="hero-visual">
+        <img
+          class="hero-feature"
+          src="assets/feature_graphic.png"
+          width="1024"
+          height="500"
+          alt="Kitchen Buddy — calm cook timers, pantry, shopping. Offline-first kitchen helper by Lucky Tools."
+        />
       </div>
     </section>
 
-    <div class="grid-2">
-      <article class="card">
-        <h2>On your phone</h2>
-        <p>
-          Pantry, timers, diary, allergens, and shopping lists are stored locally.
-          We donâ€™t run a Kitchen Buddy cloud account for your stock.
-        </p>
-      </article>
-      <article class="card">
-        <h2>Optional network</h2>
-        <p>
-          If you turn on online product lookup, only a barcode number may be sent
-          to public food databases (e.g. Open Food Facts) to fill product details.
-        </p>
-      </article>
-      <article class="card">
-        <h2>Camera &amp; OCR</h2>
-        <p>
-          Camera is used for barcodes, use-by dates, and optional receipt text â€”
-          processed on-device. Frames are not uploaded for storage by Kitchen Buddy.
-        </p>
-      </article>
-      <article class="card">
-        <h2>Purchases</h2>
-        <p>
-          Optional Calm Deluxe is billed by Google Play. Cooking, pantry, and timers
-          stay free. Manage or cancel subscriptions in Google Play.
-        </p>
-      </article>
-    </div>
+    <section class="section" id="screens" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">Inside the app</h2>
+        <p>Cupboard, fridge, freezer, shopping and cook — real screens</p>
+      </div>
+      <div class="shot-gallery">
+        <article class="shot-card">
+          <figure>
+            <img src="assets/01_home.jpg" alt="Kitchen Buddy home screen with COOK NOW and COOK LATER" width="540" height="1170" loading="lazy" />
+          </figure>
+          <figcaption>
+            Home
+            <span>COOK NOW / COOK LATER, pantry overview, shopping reminders</span>
+          </figcaption>
+        </article>
+        <article class="shot-card">
+          <figure>
+            <img src="assets/02_pantry_cupboard.jpg" alt="Cupboard pantry with pasta, rice and oils" width="540" height="1170" loading="lazy" />
+          </figure>
+          <figcaption>
+            Cupboard
+            <span>Dry goods, use-by bars, empty items shown as ghosts</span>
+          </figcaption>
+        </article>
+        <article class="shot-card">
+          <figure>
+            <img src="assets/03_pantry_fridge.jpg" alt="Fridge pantry with milk, eggs, chicken and cheese" width="540" height="1170" loading="lazy" />
+          </figure>
+          <figcaption>
+            Fridge
+            <span>Fresh stock with clear use-by tracking</span>
+          </figcaption>
+        </article>
+        <article class="shot-card">
+          <figure>
+            <img src="assets/04_pantry_freezer.jpg" alt="Freezer pantry with peas, fish fingers and ice cream" width="540" height="1170" loading="lazy" />
+          </figure>
+          <figcaption>
+            Freezer
+            <span>Frozen favourites ready for multi-dish cooking</span>
+          </figcaption>
+        </article>
+        <article class="shot-card">
+          <figure>
+            <img src="assets/05_shopping.jpg" alt="Shopping list grouped by store with Restock buttons" width="540" height="1170" loading="lazy" />
+          </figure>
+          <figcaption>
+            Shopping
+            <span>Empty or low stock, grouped by store, one-tap restock</span>
+          </figcaption>
+        </article>
+        <article class="shot-card">
+          <figure>
+            <img src="assets/06_cook.jpg" alt="Cook screen with selected dishes and 25 minute meal summary" width="540" height="1170" loading="lazy" />
+          </figure>
+          <figcaption>
+            Cook
+            <span>Multi-dish plan, shared finish time, calm step flow</span>
+          </figcaption>
+        </article>
+      </div>
+    </section>
 
-    <article class="card" style="margin-top: 1.5rem">
-      <h2>Google Play package</h2>
+    <section class="section" aria-labelledby="features-title">
+      <div class="section-head">
+        <h2 id="features-title">Built for low-stress cooking</h2>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>On your phone</h3>
+          <p>
+            Pantry, timers, diary, allergens, and shopping lists are stored locally.
+            We don’t run a Kitchen Buddy cloud account for your stock.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Optional network</h3>
+          <p>
+            If you turn on online product lookup, only a barcode number may be sent
+            to public food databases (e.g. Open Food Facts) to fill product details.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Camera &amp; OCR</h3>
+          <p>
+            Camera is used for barcodes, use-by dates, and optional receipt text —
+            processed on-device. Frames are not uploaded for storage by Kitchen Buddy.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Free &amp; Calm Deluxe</h3>
+          <p>
+            Cooking, pantry, and timers stay free. Optional ads on free tier.
+            Remove ads alone, or Calm Deluxe for ad-free + unlimited online lookups
+            via Google Play.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <article class="card meta-card" style="margin-top: 1.5rem">
+      <h3>Google Play package</h3>
       <p>
         Application ID: <code>com.luckytools.synccook</code><br />
         Publisher: Lucky Tools<br />
@@ -87,8 +175,9 @@
 
     <footer class="site-footer">
       <p>
-        Â© <span id="y"></span> Lucky Tools Â·
-        <a href="privacy.html">Privacy</a> Â·
+        © <span id="y"></span> Lucky Tools ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="delete-data.html">Delete data</a> ·
         <a href="terms.html">Terms</a>
       </p>
       <p>Not medical advice. Allergen and nutrition information is advisory only.</p>
