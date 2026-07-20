@@ -215,7 +215,8 @@ a:hover {
   font-size: 0.95rem;
 }
 
-/* Screenshot gallery */
+/* Screenshot gallery (legacy — no longer used now the carousel is in place,
+   safe to delete once you've confirmed the carousel works) */
 .shot-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -438,4 +439,139 @@ a:hover {
   background: var(--surface-high);
   padding: 0.1rem 0.35rem;
   border-radius: 6px;
+}
+
+/* --- lc-carousel (scroll-snap based, matches Kitchen Buddy theme) --- */
+.lc-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lc-carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+  /* hide native scrollbar; dots + arrows are the real controls */
+  scrollbar-width: none;
+}
+.lc-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.lc-carousel-track .shot-card {
+  flex: 0 0 78%;
+  max-width: 260px;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 560px) {
+  .lc-carousel-track .shot-card {
+    flex-basis: 45%;
+  }
+}
+
+@media (min-width: 900px) {
+  .lc-carousel-track .shot-card {
+    flex-basis: 30%;
+  }
+}
+
+.lc-carousel-track .shot-card figure {
+  margin: 0;
+  background: #ebe4d8;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+}
+
+.lc-carousel-track .shot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.lc-carousel-track .shot-card figcaption {
+  padding: 0.75rem 0.9rem 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.lc-carousel-track .shot-card figcaption span {
+  display: block;
+  margin-top: 0.2rem;
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.lc-carousel-btn {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+.lc-carousel-btn:hover:not(:disabled) {
+  background: var(--surface-high);
+  color: #4a675a;
+}
+.lc-carousel-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.lc-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.lc-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+.lc-carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--border);
+  cursor: pointer;
+}
+.lc-carousel-dots button.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+@media (max-width: 480px) {
+  .lc-carousel-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1.2rem;
+  }
 }
